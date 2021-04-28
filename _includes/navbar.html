@@ -18,7 +18,7 @@
       {% comment %} Select what logo to display. {% endcomment %}
       {% if site.carpentry == "swc" %}
       <a href="{{ site.swc_site }}" class="pull-left">
-        <img class="navbar-logo" src="{{ relative_root_path }}{% link /assets/img/swc-icon-blue.svg %}" alt="Software Carpentry logo" />
+        <img class="navbar-logo" src="{{ relative_root_path }}{% link /assets/img/uio-carpentry-logo-2.png %}" alt="Carpentry@UiO logo" />
       </a>
       {% elsif site.carpentry == "dc" %}
       <a href="{{ site.dc_site }}" class="pull-left">
@@ -42,7 +42,7 @@
       <ul class="nav navbar-nav">
 
 	{% comment %} Always show code of conduct. {% endcomment %}
-        <li><a href="{{ relative_root_path }}{% link CODE_OF_CONDUCT.md %}">Code of Conduct</a></li>
+        <li><a href="https://uio-carpentry.github.io/more/code_of_conduct/">Code of Conduct</a></li>
 
         {% if site.kind == "lesson" %}
 	{% comment %} Show setup instructions. {% endcomment %}

@@ -32,54 +32,6 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% endcomment %}
 
 
-
-
-
-{% comment %}
-Check DC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "dc" %}
-{% unless site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-socsci" or site.curriculum == "dc-geospatial" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-Check SWC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-
 <h2 id="general">General Information</h2>
 
 {% comment %}
@@ -174,9 +126,9 @@ Modify the block below if there are any special requirements.
     Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
   {% else %}
     Participants must have access to a computer with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.).
   {% endif %}
-  They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  They should have Zoom and a few specific software packages installed (installation guide provided in acceptance email). 
 </p>
 
 {% comment %}
@@ -235,11 +187,6 @@ Display the contact email address set in the configuration file.
   for more information.
 </p>
 
-<p id="roles">
-  <strong>Roles:</strong>
-  To learn more about the roles at the workshop (who will be doing what),
-  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
-</p>
 
 {% comment %}
 WHO CAN ATTEND?
@@ -270,49 +217,23 @@ CODE OF CONDUCT
 <h2 id="code-of-conduct">Code of Conduct</h2>
 
 <p>
-Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
-</p>
-
-<p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
-    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
-  </a>
+Everyone who participates in Carpentry@UiO activities is required to conform to <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">The Carpentries Code of Conduct</a>. To report Code of Conduct violations for local Carpentry@UiO workshops, use <a href="https://www.uio.no/english/about/hse/speak-up/index.html">UiO’s speak-up </a>(English) or <a href="https://www.uio.no/om/hms/si-fra/">si-fra </a>(Norwegian) reporting.
 </p>
 <hr/>
 
 
 {% comment %}
 Collaborative Notes
-
-If you want to use an Etherpad, go to
-
-https://pad.carpentries.org/YYYY-MM-DD-site
-
-where 'YYYY-MM-DD-site' is the identifier for your workshop,
-e.g., '2015-06-10-esu'.
-
-Note we also have a CodiMD (the open-source version of HackMD)
-available at https://codimd.carpentries.org
+As this workshop is not a Carpentry workshop, I set up a HackMD team memo.
 {% endcomment %}
 {% if page.collaborative_notes %}
 <h2 id="collaborative_notes">Collaborative Notes</h2>
 
 <p>
-We will use this <a href="{{ page.collaborative_notes }}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+We will use this <a href="https://hackmd.io/@uio-carpentry/2021-05-25-uio-R-online/edit">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 <hr/>
 {% endif %}
-
-
-{% comment %}
-SURVEYS - DO NOT EDIT SURVEY LINKS
-{% endcomment %}
-<h2 id="surveys">Surveys</h2>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-
-<hr/>
 
 
 {% comment %}
@@ -365,23 +286,10 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
-  {% if site.carpentry == "swc" %}
-  Software Carpentry
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% endif %}
-  workshop,
-  you will need access to the software described below.
-  In addition, you will need an up-to-date web browser.
+  Upon acceptance of your registration, you will be receiving installation instruction of necessary software and packages. 
+  In addition, you will need an up-to-date web browser and Zoom client installed.
 </p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
-</p>
+
 
 {% comment %}
 For online workshops, the section below provides:
@@ -395,17 +303,4 @@ to include the relevant installation instrucctions.
 {% endcomment %}
 {% if online != "false" %}
 {% include install_instructions/videoconferencing.html %}
-{% endif %}
-
-{% comment %}
-These are the installation instructions for the tools used
-during the workshop.
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/setup.html %}
 {% endif %}

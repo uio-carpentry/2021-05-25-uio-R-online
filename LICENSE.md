@@ -2,9 +2,13 @@
 layout: page
 title: "Licenses"
 ---
+## Attribution
+This workshop website is made by using <a href="https://github.com/carpentries/workshop-template">the Carpentries workshop website template</a>, which is made available under [Creative Commons Attribution
+license][cc-by-human].
+
 ## Instructional Material
 
-All Software Carpentry, Data Carpentry, and Library Carpentry instructional material is
+All Carpentry@UiO instructional material is
 made available under the [Creative Commons Attribution
 license][cc-by-human]. The following is a human-readable summary of
 (and not a substitute for) the [full legal text of the CC BY 4.0
@@ -47,7 +51,7 @@ Notices:
 ## Software
 
 Except where otherwise noted, the example programs and other software
-provided by Software Carpentry and Data Carpentry are made available under the
+provided by Carpentry@UiO are made available under the
 [OSI][osi]-approved
 [MIT license][mit-license].
 
