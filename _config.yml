@@ -27,7 +27,7 @@ carpentry: "swc"
 # dc-geospatial: for Data Carpentry Geospatial
 # swc-inflammation: for Software Carpentry based on the inflammation dataset
 # swc-gapminder: for Software Carpentry based on the Gapminder dataset
-curriculum: "swc-gapminder"
+curriculum: ""
 
 # If there is both an R and python official version of a curriculum
 # (as listed on https://software-carpentry.org/lessons/ and
@@ -35,7 +35,7 @@ curriculum: "swc-gapminder"
 # value of the variable below ("flavor") to get the schedule and installation
 # instructions updated accordingly (valid values are 'r' or 'python').
 # Note: this is only for Data Carpentry and SWC at this time.
-flavor: "r"
+flavor: ""
 
 # Overall title for the Workshop.
 # This variable is used to (optionally) add a title in the "jumbotron"
@@ -43,7 +43,7 @@ flavor: "r"
 # Most workshops don't use extra pages. More information about extra
 # pages are included in the README:
 # https://github.com/carpentries/workshop-template#creating-extra-pages
-title: "Carpentry@UiO R and Tidyverse (Novices)"
+title: "Carpentry@UiO Data Analysis and Visualization in R and Tidyverse (Novices)"
 
 
 #------------------------------------------------------------
@@ -59,9 +59,8 @@ kind: "workshop"
 repository: <USERNAME>/<PROJECT>
 
 # Email address, no mailto:
-# (Don't change this -- the contact address for your workshop will be set
-# in the index.md file)
-email: "team@carpentries.org"
+# Due to the non-Carpentry workshop, changed the contact email to the one for Carpentry@UiO 
+email: "contact-us@carpentry.uio.no"
 
 # Sites.
 amy_site: "https://amy.carpentries.org"
@@ -74,7 +73,7 @@ example_site: "https://carpentries.github.io/lesson-example"
 lc_site: "https://librarycarpentry.org/"
 swc_github: "https://github.com/swcarpentry"
 swc_pages: "https://swcarpentry.github.io"
-swc_site: "https://software-carpentry.org"
+swc_site: "https://uio-carpentry.github.io/" #changed to Carpentry@UiO community page, but the variable remains.
 template_repo: "https://github.com/carpentries/styles"
 training_site: "https://carpentries.github.io/instructor-training"
 workshop_repo: "https://github.com/carpentries/workshop-template"
