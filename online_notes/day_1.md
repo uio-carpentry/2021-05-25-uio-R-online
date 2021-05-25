@@ -1,6 +1,7 @@
-Carpentry@UiO R and Tidyverse (Novices) 
-Day 1 Q&A
-===
+---
+layout: page
+title: "Carpentry@UiO R and Tidyverse (Novices), Day 1 Q&A"
+---
 
 ## Visualisation with {ggplot2}
 [Lesson materials](https://athanasiamo.github.io/swc.tidyverse/materials/001-ggplot2.html)
