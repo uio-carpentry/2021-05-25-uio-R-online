@@ -232,6 +232,7 @@ As this workshop is not a Carpentry workshop, I set up a HackMD team memo.
 We will use this <a href="https://hackmd.io/@uio-carpentry/2021-05-25-uio-R-online/edit">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.<br>
 <h3>Archive of Q&A</h3>
 - <a href=".{% link online_notes/day_1.md %}">Day 1</a>
+- <a href=".{% link online_notes/day_2.md %}">Day 2</a>
 </p>
 {% endif %}
 <hr/>
